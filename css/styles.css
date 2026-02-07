@@ -6,6 +6,10 @@ body {
     background-color: #FFFFFF;
     line-height: 1.5;
     font-size: 16px;
+    width: 1440px;
+    height: 3300px;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -36,6 +40,14 @@ ol {
     list-style-type: none;
 }
 
+header {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+}
+
 header a {
     text-decoration: none;
     color: inherit;
@@ -43,39 +55,51 @@ header a {
 /* #endregion */
 
 /* #region Navigation */
+
+.navigation {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+}
+
 .navigation-list {
     font-weight: 500;
     letter-spacing: 0.04em;
+    display: flex;
+    gap: 32px;
+    text-align: center;
 }
 
-.navigation-list-item-a {
+.navigation-link {
     color: #2E2F42;
     font-weight: 500;
     letter-spacing: 0.02em;
     font-style: normal;
 }
 
-.navigation-list-item-a:hover,
-.navigation-list-item-a:focus {
+.navigation-link:hover,
+.navigation-link:focus {
     color: #404bbf;
 }
 
-.navigation-list-item-a:active {
+.navigation-link:active {
     color: #404bbf;
     text-decoration: underline;
 }
 /* #endregion */
 
 /* #region Contacts */
-.contacts-list-item {
+.contacts-item {
     color: #434455;
     font-weight: 400;
     letter-spacing: 0.02em;
     font-style: normal;
 }
 
-.contacts-list-item a:hover,
-.contacts-list-item a:focus {
+.contacts-item a:hover,
+.contacts-item a:focus {
     color: #404bbf;
 }
 /* #endregion */
@@ -100,6 +124,8 @@ header a {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    background: #4d5ae5;
 }
 
 .hero-button:hover {
@@ -115,10 +141,26 @@ header a {
 
 /* #region Features */
 
-
 .features {
     background-color: #FFFFFF;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.features-list {}
+
+.features-item {}
 
 .features-subtitle {
     letter-spacing: 0.02em;
@@ -141,14 +183,24 @@ header a {
     background-color: #F4F4FD;
 }
 
+.team-title {
+    letter-spacing: 0.02em;
+    line-height: 1.11;
+    text-align: center;
+}
+
+.team-list {}
+
 .team-item {
     text-align: center;
     background-color: #FFFFFF;
 }
 
-.team-title {
+.team-img {}
+
+.team-subtitle {
     letter-spacing: 0.02em;
-    line-height: 1.11;
+    line-height: 1.2;
     text-align: center;
 }
 
@@ -160,18 +212,28 @@ header a {
     letter-spacing: 0.02em;
 }
 
-.team-subtitle {
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-    text-align: center;
-}
 /* #endregion */
 
 /* #region Portfolio */
+
+.portfolio {}
+
 .portfolio-title {
 
     line-height: 1.11;
     text-align: center;
+}
+
+.portfolio-list {}
+
+.portfolio-item {}
+
+.portfolio-img {}
+
+.portfolio-subtitle {
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    text-align: left;
 }
 
 .portfolio-text {
@@ -182,15 +244,10 @@ header a {
     letter-spacing: 0.02em;
 }
 
-.portfolio-subtitle {
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-    text-align: left;
-}
 /* #endregion */
 
 /* #region Footer */
-footer {
+.footer {
     background-color: #2E2F42;
     color: #F4F4FD;
 }
