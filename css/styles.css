@@ -6,10 +6,10 @@ body {
     background-color: #FFFFFF;
     line-height: 1.5;
     font-size: 16px;
-    width: 1440px;
+    /* max-width: 1440px;
     height: 3300px;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
+    padding: 0; */
 }
 
 h1 {
@@ -19,6 +19,7 @@ h1 {
     line-height: 1.07;
     color: #FFFFFF;
     text-align: center;
+    margin: 0;
 }
 
 h2 {
@@ -26,6 +27,7 @@ h2 {
     font-size: 36px;
     letter-spacing: 0.02em;
     color: #2E2F42;
+    margin: 0;
 }
 
 h3 {
@@ -33,25 +35,43 @@ h3 {
     font-size: 20px;
     letter-spacing: 0.02em;
     color: #2E2F42;
+    margin: 0;
 }
 
 ul,
 ol {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: #FFFFFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 32px;
+    border-bottom: 1px solid #e7e9fc;
 }
 
 header a {
     text-decoration: none;
-    color: inherit;
 }
+/* #endregion */
+
+/* #region Containers */
+
+.container {
+    max-width: 1158px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
 /* #endregion */
 
 /* #region Navigation */
@@ -59,17 +79,17 @@ header a {
 .navigation {
     background-color: #FFFFFF;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 16px 32px;
+    flex-wrap: wrap;
 }
 
 .navigation-list {
     font-weight: 500;
     letter-spacing: 0.04em;
     display: flex;
-    gap: 32px;
-    text-align: center;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 .navigation-link {
@@ -77,6 +97,9 @@ header a {
     font-weight: 500;
     letter-spacing: 0.02em;
     font-style: normal;
+    display: block ;
+    padding: 24px 0;
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
@@ -91,15 +114,26 @@ header a {
 /* #endregion */
 
 /* #region Contacts */
-.contacts-item {
+
+.contacts {}
+
+.contacts-list {
+    display: flex;
+    gap: 40px;
+}
+
+.contacts-link {
     color: #434455;
     font-weight: 400;
     letter-spacing: 0.02em;
     font-style: normal;
+    display: block;
+    padding: 24px 0;
+    gap: 40px;
 }
 
-.contacts-item a:hover,
-.contacts-item a:focus {
+.contacts-link:hover,
+.contacts-link:focus {
     color: #404bbf;
 }
 /* #endregion */
@@ -271,6 +305,10 @@ header a {
     font-size: 18px;
     letter-spacing: 0.03em;
     line-height: 1.17;
+    margin-right: 76px;
+    display: block;
+    padding: 24px 0;
+
 }
 
 .logo span {
