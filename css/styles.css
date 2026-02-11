@@ -112,7 +112,6 @@ p {
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 48px;
         }
     /* #endregion */
     /* #region Footer */
@@ -370,7 +369,8 @@ p {
 
 .portfolio-list {
     display: flex;
-    gap: 24px; 
+    row-gap: 48px;
+    column-gap: 24px; 
     flex-wrap: wrap;
 }
 
