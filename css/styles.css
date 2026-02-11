@@ -1,3 +1,8 @@
+*, *::before,
+ *::after {
+    box-sizing: border-box;
+}
+
 /* #region Main */
 
 body {
@@ -56,22 +61,64 @@ header a {
 /* #endregion */
 
 /* #region Containers */
-
-.container {
-    max-width: 1158px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+    /* #region Container */
+        .container {
+            max-width: 1158px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+    /* #endregion */
+    /* #region Header */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+}
+    /* #endregion */
+    /* #region Hero */
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-
+        .hero-button-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 10px;
+        }
+    /* #endregion */
+    /* #region Features */
+        .features-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* flex-wrap: wrap; */
+        }
+    /* #endregion */
+    /* #region Portfolio */
+        .portfolio-list-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+    /* #endregion */
+    /* #region Footer */
+        .footer-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 24px;
+        }
+    /* #endregion */
 /* #endregion */
 
 /* #region Navigation */
@@ -141,42 +188,54 @@ header a {
 /* #region Hero */
 .hero {
     background-color: #2E2F42;
-    color: #FFFFFF;
     text-align: center;
+}
+
+.hero-title {
     font-weight: 700;
-    font-size: 24px;
-    line-height: 1.5;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 496px;
+    margin: 188px auto 48px;
+    /* flex-wrap: wrap; */
+    padding: 0;
 }
 
 .hero-button {
-    background-color: #4D5AE5;
-    color: #FFFFFF;
+    display: block;
     border: none;
-    padding: 16px 32px;
     cursor: pointer;
     letter-spacing: 0.04em;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    margin: 0 auto 188px;
+    height: 56px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background: #4d5ae5;
 }
 
-.hero-button:hover {
-    background-color: #404BBF;
-}
-
 .hero-button:focus,
-.hero-button:focus-visible,
+.hero-button:hover,
 .hero-button:active {
     background-color: #404BBF;
 }
+
 /* #endregion */
 
 /* #region Features */
 
 .features {
     background-color: #FFFFFF;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .visually-hidden {
@@ -192,9 +251,15 @@ header a {
     overflow: hidden;
 }
 
-.features-list {}
+.features-list {
+    display: flex;
+    gap: 24px;      
+    flex-wrap: wrap;
+}
 
-.features-item {}
+.features-item {
+    width: calc((100% - 3 * 24px) / 4);
+}
 
 .features-subtitle {
     letter-spacing: 0.02em;
@@ -215,19 +280,36 @@ header a {
 
 .team {
     background-color: #F4F4FD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .team-title {
-    letter-spacing: 0.02em;
     line-height: 1.11;
     text-align: center;
+    margin-top: 120px;
+    max-width: 165px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.team-list {}
+.team-list {
+    display: flex;
+    gap: 24px; 
+    flex-wrap: wrap;
+    padding: 72px 0 120px;
+}
 
 .team-item {
     text-align: center;
     background-color: #FFFFFF;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    border-radius: 0 0 4px 4px;     
+    padding: 0px;
+    width: 264px;
+    height: 380px;
 }
 
 .team-img {}
@@ -236,31 +318,51 @@ header a {
     letter-spacing: 0.02em;
     line-height: 1.2;
     text-align: center;
+    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
 .team-text {
-    color: #434455;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: center;
+    color: #434455;
+    margin-bottom: 32px;
+    margin-top: 0;
 }
 
 /* #endregion */
 
 /* #region Portfolio */
 
-.portfolio {}
-
-.portfolio-title {
-
-    line-height: 1.11;
-    text-align: center;
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.portfolio-list {}
+.portfolio-title {
+    padding-top: 120px;
+    padding-bottom: 72px;
+    max-width: 220px;
+    line-height: 1.11;
+    text-align: center;
+    margin: 0 auto;
+}
 
-.portfolio-item {}
+.portfolio-list {
+    display: flex;
+    gap: 24px; 
+    flex-wrap: wrap;
+    margin-bottom: 120px;
+}
+
+.portfolio-item {
+    max-width: 360px;
+}
 
 .portfolio-img {}
 
@@ -268,6 +370,9 @@ header a {
     letter-spacing: 0.02em;
     line-height: 1.2;
     text-align: left;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    margin-left: 16px;
 }
 
 .portfolio-text {
@@ -276,6 +381,11 @@ header a {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+    padding-left: 16px;
+    padding-bottom: 32px;
+    margin-top: 0;
 }
 
 /* #endregion */
@@ -284,6 +394,12 @@ header a {
 .footer {
     background-color: #2E2F42;
     color: #F4F4FD;
+    padding: 100px 0;
+}
+
+.footer-logo {
+    margin-bottom: 16px;
+    max-width: 115px;
 }
 
 .footer-text {
@@ -292,6 +408,8 @@ header a {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    max-width: 264px;
+    /* margin-top: 0; */
 }
 /* #endregion */
 
@@ -307,7 +425,7 @@ header a {
     line-height: 1.17;
     margin-right: 76px;
     display: block;
-    padding: 24px 0;
+    /* padding: 24px 0; */
 
 }
 
