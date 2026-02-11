@@ -112,7 +112,7 @@ p {
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 24px;
+            gap: 48px;
         }
     /* #endregion */
     /* #region Footer */
@@ -121,7 +121,7 @@ p {
             align-items: flex-start;
             justify-content: center;
             flex-direction: column;
-            gap: 24px;
+            /* gap: 24px; */
         }
     /* #endregion */
 /* #endregion */
@@ -325,14 +325,14 @@ p {
 }
 
 .team-item-text {
-    margin: 32px 16px;
+    padding: 32px 16px;
 }
 
 .team-subtitle {
     letter-spacing: 0.02em;
     line-height: 1.2;
     text-align: center;
-    margin-top: 32px;
+    /* margin-top: 32px; */
     margin-bottom: 8px;
 }
 
