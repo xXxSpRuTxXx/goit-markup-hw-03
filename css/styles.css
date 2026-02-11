@@ -50,15 +50,6 @@ ol {
     padding: 0;
 }
 
-header {
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #e7e9fc;
-}
-
-header a {
-    text-decoration: none;
-}
-
 p {
     margin: 0;
 }
@@ -74,12 +65,18 @@ p {
         }
     /* #endregion */
     /* #region Header */
+
+        .header {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #e7e9fc;
+        }
+
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-}
+        }
     /* #endregion */
     /* #region Hero */
         .hero-container {
@@ -151,6 +148,7 @@ p {
     display: block ;
     padding: 24px 0;
     transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
 }
 
 .navigation-link:hover,
@@ -181,6 +179,7 @@ p {
     display: block;
     padding: 24px 0;
     gap: 40px;
+    text-decoration: none;
 }
 
 .contacts-link:hover,
@@ -271,6 +270,7 @@ p {
     letter-spacing: 0.02em;
     line-height: 1.2;
     text-align: left;
+    margin-bottom: 8px;
 }
 
 .features-text {
@@ -365,6 +365,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 72px;
+    text-align: center;
 }
 
 .portfolio-list {
